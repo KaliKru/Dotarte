@@ -10,6 +10,19 @@ Die Seite ist **absichtlich nicht in Suchmaschinen auffindbar** — sie ist nur 
 
 Falls die Seite später doch auffindbar sein soll: beides entfernen.
 
+## Kontakt-Schutz (LinkedIn & E-Mail)
+
+Zwei zusätzliche Maßnahmen, damit Kontaktdaten nicht von Bots/Crawlern automatisch erfasst werden:
+
+- **LinkedIn-Link**: `rel="noopener noreferrer"` — verhindert, dass LinkedIn über den HTTP-Referrer-Header sieht, dass der Klick von dieser Seite kam
+- **E-Mail-Link**: Adresse liegt Base64-verschlüsselt im Code (`atob(...)`), wird erst beim Klick zu einem echten `mailto:`-Link zusammengesetzt — schützt vor einfachen E-Mail-Scraping-Bots
+
+**Falls die E-Mail-Adresse später geändert wird**, muss der neue Code dafür einmal frisch generiert werden. In der Browser-Konsole (F12 → Console):
+```js
+btoa("neue-adresse@beispiel.de")
+```
+Das Ergebnis ersetzt den Base64-String in **beiden** Dateien (`index.html` und `projects/ajar.html`), im `onclick`-Attribut des Mail-Links.
+
 ## Struktur
 
 ```
@@ -38,5 +51,4 @@ Fonts werden über Google Fonts eingebunden (im `<head>` jeder Seite verlinkt).
 
 ## Offene Punkte
 
-- **Ajar — Testing & Iteration:** Before/After-Bilder für Runde 3 fehlen noch
 - Weitere Projekt-Unterseiten (Seasons, Corporate Identity, Immobilien-Branding) sind auf der Hauptseite als Platzhalter angelegt, eigene Case-Study-Seiten folgen noch
