@@ -298,7 +298,7 @@
   }
 
   .testing-round + .testing-round {
-    margin-top: clamp(64px, 10vw, 96px);
+    margin-top: clamp(32px, 5vw, 48px);
   }
 
   .testing-intro {
@@ -344,6 +344,7 @@
   }
 
   .testing-card p { margin: 0; }
+  .testing-card p + p { margin-top: 8px; }
 
   .testing-card-label {
     display: inline-block;
@@ -353,6 +354,16 @@
     text-transform: uppercase;
     color: #c17a5a;
     margin-bottom: 12px;
+  }
+
+  .testing-card-sublabel {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #c17a5a;
+    margin: 14px 0 8px;
   }
 
   @media (max-width: 700px) {
@@ -375,6 +386,20 @@
     gap: 16px;
     flex: 1 1 260px;
     max-width: 380px;
+  }
+
+  .testing-compare-4 {
+    gap: clamp(16px, 3vw, 28px);
+  }
+
+  .testing-compare-4 .testing-phone {
+    flex: 1 1 180px;
+    max-width: 220px;
+  }
+
+  @media (max-width: 860px) {
+    .testing-compare-4 { flex-wrap: wrap; }
+    .testing-compare-4 .testing-phone { flex: 1 1 40%; }
   }
 
   .testing-phone img {
@@ -502,7 +527,7 @@
 
   .timeline {
     position: relative;
-    margin-top: clamp(56px, 8vw, 96px);
+    margin-top: 0;
   }
 
   .timeline::before {
@@ -596,8 +621,8 @@
     color: #c17a5a;
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    font-style: italic;
-    font-size: 20px;
+    font-style: normal;
+    font-size: 40px;
   }
 
   @media (max-width: 860px) {
@@ -808,7 +833,7 @@
   /* ---------- NAME STORY (simple addendum, no hover) ---------- */
   .name-story {
     max-width: 1400px;
-    margin: 0 auto clamp(64px, 9vw, 100px);
+    margin: clamp(56px, 8vw, 88px) auto clamp(64px, 9vw, 100px);
     padding: 0 clamp(24px, 6vw, 96px);
   }
 
