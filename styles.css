@@ -32,33 +32,66 @@ a { color: inherit; }
 .hero-section {
   background: var(--cream);
   border-radius: 0 0 var(--radius) var(--radius);
-  padding: clamp(24px, 4vw, 48px) clamp(24px, 6vw, 96px) clamp(64px, 9vw, 120px);
+  padding: clamp(100px, 12vw, 140px) clamp(24px, 6vw, 96px) clamp(64px, 9vw, 120px);
   box-shadow: var(--card-shadow);
   position: relative;
   z-index: 1;
 }
 
 .pill-nav {
-  display: flex;
+  position: fixed;
+  top: 20px;
+  z-index: 50;
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
-  border: 1.5px solid var(--gold);
+  width: fit-content;
+  background: var(--cream);
   border-radius: 999px;
-  padding: 20px 36px;
-  margin: 0 auto clamp(56px, 9vw, 110px);
-  max-width: 1400px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.pill-nav a {
+.logo-nav {
+  left: clamp(24px, 6vw, 96px);
+  padding: 8px;
+}
+
+.menu-nav {
+  right: clamp(24px, 6vw, 96px);
+  padding: 10px 20px;
+}
+
+.pill-nav.nav-hidden {
+  transform: translateY(-140%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ink);
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
   text-decoration: none;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--ink);
   position: relative;
+  white-space: nowrap;
 }
 
-.pill-nav a::after {
+.nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -69,7 +102,7 @@ a { color: inherit; }
   transition: width 0.25s ease;
 }
 
-.pill-nav a:hover::after { width: 100%; }
+.nav-links a:hover::after { width: 100%; }
 
 .hero-content {
   max-width: 1400px;
@@ -95,8 +128,8 @@ a { color: inherit; }
   background: var(--gold);
   color: var(--ink);
   font-weight: 700;
-  font-size: 16px;
-  padding: 18px 34px;
+  font-size: 15px;
+  padding: 12px 28px;
   border-radius: 999px;
   text-decoration: none;
   border: none;
@@ -451,7 +484,10 @@ a { color: inherit; }
   .project-card.card-small:hover { flex-basis: auto; }
   .card-large:hover .card-media { flex-basis: 100%; }
   .card-large:hover .card-desc { flex-basis: 0; max-width: 0; opacity: 0; padding-left: 0; }
-  .pill-nav { flex-wrap: wrap; justify-content: center; gap: 20px; padding: 16px 24px; }
+  .logo-nav { left: 16px; top: 14px; }
+  .menu-nav { right: 16px; top: 14px; padding: 8px 16px; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 12px; }
 }
 
 /* ---------- FOOTER / CONTACT ---------- */
@@ -531,6 +567,40 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease;
+}
+
+.scroll-top-float {
+  position: fixed;
+  bottom: 24px;
+  right: clamp(24px, 6vw, 96px);
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--cream);
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.scroll-top-float svg {
+  width: 20px;
+  height: 20px;
+}
+
+.scroll-top-float:hover {
+  transform: translateY(-2px);
+}
+
+.scroll-top-float.nav-hidden {
+  transform: translateY(140%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .scroll-top:hover {
