@@ -1082,6 +1082,37 @@
 
   .scroll-top svg { width: 20px; height: 20px; }
 
+  .scroll-top-float {
+    position: fixed;
+    bottom: 24px;
+    right: clamp(24px, 6vw, 96px);
+    z-index: 50;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: var(--bg-nav);
+    box-shadow: var(--card-shadow);
+    cursor: pointer;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .scroll-top-float svg { width: 20px; height: 20px; }
+
+  .scroll-top-float:hover {
+    transform: translateY(-2px);
+  }
+
+  .scroll-top-float.nav-hidden {
+    transform: translateY(140%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .copyright {
     text-align: center;
     font-size: 13px;
