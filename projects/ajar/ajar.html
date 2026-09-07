@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajar — Product Design Case</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ajar.css">
+</head>
+<body>
+
+<nav class="pill-nav" id="mainNav">
+  <a href="../../index.html" class="logo-dot" aria-label="Zur Startseite"></a>
+</nav>
+
+<button class="scroll-top-float" id="scrollTopFloat" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})" aria-label="Nach oben scrollen">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<section class="hero-section" id="top">
+  <div class="hero-inner">
+  <div class="hero-media">
+    <img class="hero-banner" src="images/hero-banner.png" alt="Drei App-Screens von Ajar nebeneinander: Splash-Screen mit Katzen-Silhouette, Foto-Scan-Aufforderung und ein Beispiel-Zitat mit Close-Button">
+  </div>
+
+  <p class="eyebrow">· End‑to‑End Product Design Case — von Research bis zum High‑Fidelity‑Prototyp ·</p>
+
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="date-range">8. April – 28. Juli 2026</p>
+      <h1>Ajar – eine sanfte Begleiter‑App, die Erwachsenen mit ADHS hilft, liegengebliebene Briefe und bürokratische Aufgaben pünktlich zu erledigen — bevor daraus die „ADHS‑Steuer“ wird.</h1>
+    </div>
+
+    <div class="meta-columns">
+      <div class="meta-block">
+        <h3>Tools</h3>
+        <ul>
+          <li>Figma</li>
+          <li>Miro</li>
+          <li>Claude (Cowork)</li>
+          <li>WhisperNotes</li>
+        </ul>
+      </div>
+      <div class="meta-block">
+        <h3>Research</h3>
+        <ul>
+          <li>5 Interviews</li>
+          <li>20 Umfragen</li>
+          <li>3 Iterationsrunden</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="case-section">
+<div class="case-layout">
+  <aside class="toc">
+    <details class="toc-details" open>
+      <summary class="toc-toggle">
+        Inhaltsverzeichnis
+        <svg class="toc-toggle-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <ul class="toc-list">
+        <li><a href="#problem" class="toc-link" data-target="problem">Das Problem</a></li>
+        <li><a href="#process" class="toc-link" data-target="process">Prozess &amp; Schlüsselentscheidungen</a></li>
+        <li><a href="#solution" class="toc-link" data-target="solution">Die Lösung</a></li>
+        <li><a href="#testing" class="toc-link" data-target="testing">Testing &amp; Iteration</a></li>
+        <li><a href="#ai-process" class="toc-link" data-target="ai-process">AI im Designprozess</a></li>
+        <li><a href="#learnings" class="toc-link" data-target="learnings">Learnings &amp; Ausblick</a></li>
+      </ul>
+    </details>
+  </aside>
+
+  <div class="case-content">
+
+<section class="problem" id="problem">
+  <h2 class="section-eyebrow">Das Problem</h2>
+
+  <div class="problem-copy">
+    <p>93 % der Menschen mit ADHS, die ich befragt habe, wissen genau, was ansteht — und schaffen es trotzdem nicht, mit der Aufgabe anzufangen. Viele haben im Job durch feste Termine und andere Menschen Struktur, scheitern aber privat allein an Papierkram und wiederkehrenden bürokratischen Aufgaben.</p>
+
+    <p>Ein Interview hat das Problem greifbar gemacht: Eine Person hatte einen Brief wochenlang nicht geöffnet, aus Angst vor dem, was darin stehen könnte — am Ende war die Frist verpasst und das Konto gesperrt.</p>
+
+    <p>Betroffene nennen das die <strong>„ADHS‑Steuer"</strong>. Es ist aber <strong>keine Faulheit</strong>, sondern <strong>Handlungsparalyse</strong> durch Angst vor dem Unbekannten, verstärkt durch <strong>Zeitblindheit</strong>, bei der jede Aufgabe gleich dringend wirkt. Hinzu kommt ein medizinisch gut belegter Zusammenhang: Menschen mit ADHS haben häufig auch grundsätzliche <strong>Schwierigkeiten beim Lesen</strong>.</p>
+  </div>
+
+  <div class="problem-highlight">
+    <div class="stat-block">
+      <span class="stat-number">93 %</span>
+      <p class="stat-caption">kennen die Aufgabe, können aber nicht anfangen.</p>
+    </div>
+
+    <div class="quote-block">
+      <span class="quote-mark">&ldquo;</span>
+      <blockquote>Ich habe den Brief nicht geöffnet — es hat so lange gedauert, dass die Frist verpasst wurde und mein Konto geschlossen wurde.</blockquote>
+      <span class="quote-mark close">&rdquo;</span>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <h2 class="section-eyebrow">Prozess &amp; Schlüsselentscheidungen</h2>
+
+  <div class="timeline">
+    <div class="timeline-row left">
+      <span class="timeline-dot"></span>
+      <div class="timeline-item">
+        <p class="step-label">Entscheidung 1</p>
+        <h3>Zielgruppen‑Fokus</h3>
+        <p>Fokus auf Erwachsene mit ADHS, die im Job durch äußere Struktur (Deadlines, andere Menschen) gut funktionieren, aber privat ohne diese Struktur bei Alltagsaufgaben einfrieren. Der Schmerzpunkt war hier am größten, weil Scham und Leidensdruck hoch sind, aber kaum sichtbar.</p>
+      </div>
+    </div>
+
+    <div class="timeline-row right">
+      <span class="timeline-dot"></span>
+      <div class="timeline-item">
+        <p class="step-label">Entscheidung 2</p>
+        <h3>Ursprüngliche Hypothese (breiter Ansatz)</h3>
+        <p>Erster Gedanke: eine App für beliebige wiederkehrende Alltagsaufgaben. Täglich wird eine Aufgabe zugelost oder gewählt — Briefe waren nur einer von mehreren möglichen Aufgabentypen, etwa einmal pro Woche. Kerngedanke schon hier: <strong>Externalisierung der Entscheidung</strong> — die App bestimmt, was heute zu tun ist, damit die Person nicht selbst entscheiden und priorisieren muss. Das Wichtigste war, die Aufgabe überhaupt anzufangen — den ersten Schritt zu machen. Aus dem Research weiß ich: <strong>Der erste Schritt ist für Menschen mit ADHS besonders schwierig — ist er aber einmal gemacht, wird die Aufgabe meistens auch durchgezogen.</strong></p>
+      </div>
+    </div>
+
+    <div class="timeline-row left">
+      <span class="timeline-dot"></span>
+      <div class="timeline-item highlight">
+        <span class="highlight-icon">‼</span>
+        <p class="step-label">Entscheidung 3</p>
+        <h3>Der Pivot nach Testrunde 1</h3>
+        <p>Der Nutzertest widerlegte die Annahme, dass Briefe „nur eine Aufgabe unter vielen" sind. Die Teilnehmer:innen zeigten: <strong>Briefe sind nicht die Nebensache — sie sind die zentrale Hürde, weil sie zu den langweiligen, bürokratischen Aufgaben gehören, die für Menschen mit ADHS besonders schwer zu bewältigen sind.</strong> Die Würfel‑/Zufallsaufgaben‑Mechanik wurde komplett gestrichen, das MVP auf Briefe fokussiert. Das Scannen wurde sofort zum Herzstück der App.</p>
+      </div>
+    </div>
+
+    <div class="timeline-row right">
+      <span class="timeline-dot"></span>
+      <div class="timeline-item">
+        <p class="step-label">Entscheidung 4</p>
+        <h3>Bewusster Verzicht auf Gamification</h3>
+        <p>Kein Streak‑System. Begründung: <strong>Streaks führen bei Verlust zu Frustration und wirken wie eine Strafe</strong> — für eine neurodivergente Zielgruppe, die sich ohnehin oft für ihr Scheitern schämt, das falsche Signal. <strong>Stattdessen:</strong> ein humorvoller, leicht trockener Kommentar der Begleitfigur Mia nach jeder erledigten Aufgabe — <strong>Dopamin‑Kick ohne Bestrafungslogik.</strong></p>
+      </div>
+    </div>
+
+    <div class="timeline-row left">
+      <span class="timeline-dot"></span>
+      <div class="timeline-item">
+        <p class="step-label">Entscheidung 5</p>
+        <h3>Automatisierung des Kalender‑Exports</h3>
+        <p>Von manueller Bestätigung zu automatisiertem Eintrag im externen Kalender, basierend auf einer einmaligen Einstellung im Onboarding. Das senkt Reibung weiter, weil keine Rückfrage mehr nötig ist — ein Link markiert die Aufgabe gleichzeitig auch in der App als erledigt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="solution" id="solution">
+  <h2 class="section-eyebrow">Die Lösung</h2>
+
+  <div class="flow-steps">
+    <div class="flow-step">
+      <span class="flow-step-icon">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h3l2-2h6l2 2h3a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg>
+      </span>
+      <span class="flow-step-label">Foto</span>
+      <span class="flow-step-desc">Foto vom Brief</span>
+    </div>
+
+    <span class="flow-arrow">→</span>
+
+    <div class="flow-step">
+      <span class="flow-step-icon">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      <span class="flow-step-label">OCR</span>
+      <span class="flow-step-desc">Extrahiert Text &amp; Aufgaben</span>
+    </div>
+
+    <span class="flow-arrow">→</span>
+
+    <div class="flow-step">
+      <span class="flow-step-icon">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 4V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="flow-step-label">Vorschlag</span>
+      <span class="flow-step-desc">App sagt in einfachen Schritten, was zu tun ist</span>
+    </div>
+
+    <span class="flow-arrow">→</span>
+
+    <div class="flow-step">
+      <span class="flow-step-icon">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 9.5h16M8 3v3M16 3v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      <span class="flow-step-label">Export</span>
+      <span class="flow-step-desc">Zu Kalender/Trello &amp; Co.</span>
+    </div>
+
+    <span class="flow-arrow">→</span>
+
+    <div class="flow-step">
+      <span class="flow-step-icon">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v4H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5 8v11a1 1 0 001 1h12a1 1 0 001-1V8" stroke="currentColor" stroke-width="1.6"/><path d="M10 12h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      <span class="flow-step-label">Archiv</span>
+      <span class="flow-step-desc">Durchsuchbar, mit KI‑Unterstützung</span>
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="feature-phone">
+      <img src="images/phone1-scan.png" alt="App-Screen: Foto-Scan Aufforderung mit Scan-Button">
+    </div>
+    <div class="feature-text">
+      <h3>Foto‑Scan</h3>
+      <p>Nutzer:in fotografiert den Brief oder fügt eine PDF‑/JPG‑Datei ein, statt ihn selbst lesen und verstehen zu müssen. Sie:er macht nur den ersten Schritt — alles Weitere übernimmt die App.</p>
+      <p>Garantiert ist dabei, dass für heute keine weiteren Schritte mehr folgen — die App wird mithilfe der KI die Aufgaben entsprechend priorisieren. Das nimmt Menschen mit ADHS die Last, die sonst schon vor der nächsten Aufgabe entsteht.</p>
+    </div>
+  </div>
+
+  <div class="feature-row reverse">
+    <div class="feature-text">
+      <h3>Aufgaben‑Erkennung</h3>
+      <p>Die App zeigt in einfachen Worten, was zu tun ist und bis wann. Zentrale Design‑Entscheidung: Nicht die Person muss den Brief einordnen und verstehen — die App übernimmt das.</p>
+      <p>Zur <strong>kognitiven Entlastung</strong> sind die Details zunächst versteckt — man muss nur wissen, was zu tun ist und bis wann. Auch die <strong>Zeitangabe</strong> zur Dauer der Aufgabe ist für die Zielgruppe sehr bedeutsam: Wer weiß, dass eine Aufgabe nur 3 Minuten dauert, empfindet weniger Druck, Last und Angst. Trotzdem sind alle Infos griffbereit — ein Klick zeigt alle Details, die aus dem Brief entnommen wurden, um die Aufgabe zu erledigen. <strong>Den Brief selbst muss man dafür wirklich nicht mehr lesen.</strong></p>
+    </div>
+    <div class="feature-phone">
+      <img src="images/phone2-task.png" alt="App-Screen: erkannte Aufgabe „Pay your insurance" mit Frist und Aktionen">
+    </div>
+  </div>
+
+  <div class="feature-stack-row">
+    <div class="feature-phone">
+      <img src="images/phone3-detail.png" alt="App-Screen: aufgeklappte Aufgaben-Details mit Betrag, Kontonummer, Frist und Kalender-Toggle">
+    </div>
+    <div class="feature-stack">
+      <div class="feature-text">
+        <h3>Export</h3>
+        <p>Die Aufgabe wird automatisch in den externen Kalender oder ein Task‑Management‑Tool exportiert, inklusive eines Links im Termin. Über diesen Link kann die Nutzer:in die Aufgabe direkt im externen Tool abschließen — und sie wird dadurch automatisch auch in Ajar als erledigt markiert. Nutzer:innen müssen nichts doppelt markieren.</p>
+      </div>
+      <div class="feature-text">
+        <h3>Archiv</h3>
+        <p>Alle Dokumente, ob gescannt oder digital, werden zentral gespeichert und lassen sich mithilfe von KI durchsuchen, auch bei unsicherer Erinnerung. So hat man seine Unterlagen immer griffbereit — nichts geht verloren. Datenschutz ist von Anfang an mitgedacht: Die App ist auf EU‑Datenschutzrecht ausgelegt.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-swipe-row">
+    <div class="feature-text">
+      <h3>Swipe</h3>
+      <p>Aufgaben lassen sich direkt in der Liste per Swipe erledigen oder verschieben, ohne die Detailansicht öffnen zu müssen — für reibungslose Bedienung im Alltag.</p>
+    </div>
+    <div class="feature-phone">
+      <img src="images/phone4-swipe.png" alt="App-Screen: Aufgabenliste mit Swipe-Aktionen (erledigen, archivieren, löschen)">
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="feature-phone">
+      <img src="images/mia-noticed.png" alt="App-Screen: Mia-noticed-Hinweis mit streckender Katzen-Illustration und Close-Button">
+    </div>
+    <div class="feature-text">
+      <h3>Mia – Begleitfigur</h3>
+      <p>Kommentiert erledigte Aufgaben humorvoll‑trocken. Beobachtet, <strong>bewertet nicht</strong>. Sie ist immer da.</p>
+      <p>Kein übertriebenes Konfetti, kein Streak, der beim Scheitern noch bestraft.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testing" id="testing">
+  <h2 class="section-eyebrow">Testing &amp; Iteration</h2>
+
+  <p class="testing-intro">Drei Testrunden insgesamt:</p>
+
+  <div class="testing-round">
+    <div class="testing-cards">
+      <div class="testing-card">
+        <span class="testing-card-label">Usability Test – Runde 1 — Lo‑Fi MVP 1, breiter Ansatz</span>
+        <strong>Ablauf:</strong>
+        <p>Onboarding → Alltagsaufgabe wählen (App entscheidet mit) → Brief‑Funktion nutzen.</p>
+      </div>
+
+      <div class="testing-card">
+        <span class="testing-card-label">Hier fiel die Pivot‑Entscheidung</span>
+        <strong>Learning:</strong>
+        <p>Briefe öffnen war nur als eine Aufgabe unter vielen geplant — der Test zeigte, dass es die Hauptfunktion werden muss.</p>
+      </div>
+    </div>
+
+    <div class="testing-compare testing-compare-4">
+      <div class="testing-phone">
+        <span class="testing-badge before">Before</span>
+        <img src="images/testing-round2-before.png" alt="Lo-Fi Wireframe: „Let fate decide“ – Würfel-Mechanik zur Zufallsauswahl einer Aufgabe">
+      </div>
+      <div class="testing-phone">
+        <span class="testing-badge before">Before</span>
+        <img src="images/testing-round1-before.png" alt="Lo-Fi Wireframe: Aufgabenliste mit mehreren wählbaren Alltagsaufgaben">
+      </div>
+      <div class="testing-phone">
+        <span class="testing-badge before">Before</span>
+        <img src="images/testing-round1-after.png" alt="Lo-Fi Wireframe: Einzelne fokussierte Aufgabe „Open the letters“ mit Done-Button">
+      </div>
+      <div class="testing-phone">
+        <span class="testing-badge after">After</span>
+        <img src="images/testing-round2-after.png" alt="Lo-Fi Wireframe: „I'll read the letter for you!“ – fokussierter Scan-Bildschirm">
+      </div>
+    </div>
+  </div>
+
+  <div class="testing-round">
+    <div class="testing-cards">
+      <div class="testing-card">
+        <span class="testing-card-label">Runde 2 — Lo‑Fi MVP 2, fokussiert auf Briefe</span>
+        <strong>Ablauf:</strong>
+        <p>Onboarding‑Flow getestet.</p>
+        <p>Scan‑Funktion‑Flow getestet.</p>
+      </div>
+
+      <div class="testing-card">
+        <strong>Ergebnis:</strong>
+        <p>Hat gut funktioniert — das Scannen kam sofort an.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="testing-round">
+    <div class="testing-cards">
+      <div class="testing-card">
+        <span class="testing-card-label">Runde 3 — UI‑Elemente &amp; Interaktion</span>
+        <strong>Ablauf:</strong>
+        <p>Getestet wurden Details wie:</p>
+        <ul>
+          <li>die Swipe‑Bedienung</li>
+          <li>Aufgaben Ansicht</li>
+          <li>welche Informationen in der Aufgaben‑Detailansicht angezeigt werden sollen — verständlich, aber nicht überladen.</li>
+        </ul>
+      </div>
+
+      <div class="testing-card">
+        <strong>Ergebnis:</strong>
+        <p>Button „Details zeigen" wurde hervorgehoben.</p>
+        <span class="testing-card-sublabel">Warum es wichtig ist</span>
+        <p>Details der Aufgabe / des Dokuments sind auch für das künftige KI‑Training relevant – wie soll die KI Briefinhalte durchsuchen und Aufgaben priorisieren — nicht nur nach Frist, sondern auch nach Schwierigkeit oder Anzahl nötiger Schritte (z. B. „Behörde anrufen" + „Brief beantworten" dauert deutlich länger als nur eine Rechnung zu bezahlen).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="testing-highlight">
+    <div class="stat-block">
+      <span class="stat-number">4/4</span>
+      <p class="stat-caption">Testpersonen fanden den Scan‑Flow beim ersten Versuch ohne Erklärung.</p>
+    </div>
+
+    <div class="quote-block">
+      <span class="quote-mark">&ldquo;</span>
+      <blockquote>Das könnte ich echt gut gebrauchen!</blockquote>
+      <span class="quote-mark close">&rdquo;</span>
+    </div>
+  </div>
+</section>
+
+<section class="ai-process" id="ai-process">
+  <h2 class="section-eyebrow">AI im Designprozess</h2>
+
+  <div class="ai-columns">
+    <div class="ai-col">
+      <span class="ai-icon" aria-hidden="true">
+        <img src="images/icon-openai.png" alt="">
+      </span>
+      <p>Ich habe ChatGPT und Claude genutzt, um aus meinen Interview‑Transkripten erste Themen‑Cluster zu identifizieren — das hat mir Vorarbeit bei der Auswertung gespart. Die finale Interpretation und die Persona‑Bildung habe ich selbst vorgenommen.</p>
+    </div>
+
+    <div class="ai-col">
+      <span class="ai-icon" aria-hidden="true">
+        <img src="images/icon-claude.png" alt="">
+      </span>
+      <p>Für die Microcopy meiner Begleitfigur Mia habe ich mit Claude verschiedene Tonalitäten getestet, bevor ich mich für einen freundlich‑trockenen Ton entschieden habe. Mia begleitet die Person durch den Prozess und nimmt ihre Erfolge wahr — der Kommentar wirkt nicht wie eine Belohnung, sondern wie das wohlwollende Bemerken einer Begleiterin, die sieht, was geschafft wurde, ohne zu bewerten. So nimmt sie den bürokratischen Aufgaben etwas von ihrem Druck und ihrem amtlichen Ernst.</p>
+      <p>Auch bei der Aufbereitung meiner Zwischenpräsentation habe ich direkt mit Claude zusammengearbeitet — für Copy‑Anpassungen. Die visuellen Ergebnis‑Slides wurden nach dem Design System der App in HTML von Claude geschrieben und in mehreren Runden gemeinsam mit mir iteriert.</p>
+    </div>
+  </div>
+</section>
+
+<section class="learnings" id="learnings">
+  <h2 class="section-eyebrow">Learnings &amp; Ausblick</h2>
+
+  <div class="learning-item">
+    <h3>1 — Testing</h3>
+    <p>· Ich bin froh, dass ich schon sehr früh in der Wireframe‑Phase ins Testing gegangen bin — das hat mir geholfen, den MVP‑Fokus rechtzeitig einzugrenzen, statt erst spät zu merken, dass Briefe die zentrale Hürde sind und nicht nur eine Aufgabe unter vielen.</p>
+  </div>
+
+  <div class="learning-item">
+    <h3>2 — Streaks</h3>
+    <p>· Der bewusste Verzicht auf Streaks hat sich ausgezahlt: Für eine neurodivergente Zielgruppe ist positive, undramatische Bestätigung wichtiger als Gamification, die bei Rückschlägen bestraft.</p>
+  </div>
+
+  <div class="learning-item">
+    <h3>3 — Android</h3>
+    <p>· Aus Zeitgründen habe ich mich nur auf iOS‑Nutzer:innen fokussiert. Als Nächstes würde ich bei Android‑Nutzer:innen testen, ob die Swipe‑Funktion reibungslos funktioniert und ob ich zusätzlich einen Tap‑Fallback für Barrierefreiheit anbieten sollte.</p>
+  </div>
+
+  <div class="learning-outlook">
+    <h3>Ausblick auf die nächsten Schritte</h3>
+    <p>Ein E‑Mail‑Agent zur automatischen Dokumenten‑Erkennung im Postfach und in anderen Apps.</p>
+  </div>
+</section>
+
+
+
+  </div>
+</div>
+</div>
+
+<div class="name-story">
+  <p class="name-story-label">Noch ein kleiner Zusatz — woher kommt der Name?</p>
+  <div class="name-story-row">
+    <img src="images/ajar-splash.png" alt="Ajar App Splash-Screen mit Katzen-Silhouette" class="name-story-img">
+    <div class="name-story-text">
+      <p><strong>Ajar</strong> ist Englisch für eine Tür, die einen Spalt offen steht — nicht ganz zu, aber auch nicht weit geöffnet.</p>
+      <p>Das passt gut zur Kernidee: kein Druck, alles auf einmal zu erledigen (Tür weit auf), aber auch keine komplette Vermeidung (Tür zu) — nur ein kleiner erster Spalt, durch den man reinschauen kann.</p>
+      <p>Steht die Tür einen Spalt offen, sieht man, was dahinter wartet — und genau das nimmt der Angst vor dem Unbekannten ihre Kraft, dem zentralen Problem meiner Zielgruppe. Das spiegelt genau das „Mach nur den ersten Schritt"‑Prinzip.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="contact-section" id="kontakt">
+  <div class="contact-inner">
+    <div>
+      <h2 class="headline-font">Let's stay in touch</h2>
+      <p>Du möchtest mehr aus meinem Portfolio sehen, hast Fragen oder ein Projekt, bei dem ich mitwirken könnte? Ich freue mich, von dir zu hören.</p>
+    </div>
+
+    <div class="contact-list">
+      <div class="row">
+        <img class="row-icon" src="images/icon-linkedin.png" alt="" aria-hidden="true">
+        <span class="divider"></span>
+        <a href="https://linkedin.com/in/DEIN-PROFIL" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <div class="row">
+        <svg class="row-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <rect x="2" y="4" width="14" height="10" rx="2.5" fill="#2D2C2C"/>
+          <path d="M3.5 5.5L9 9.8L14.5 5.5" stroke="#F8F7F0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span class="divider"></span>
+        <a href="#" onclick="this.href='mailto:'+atob('ZG90YXJ0ZS5wb3J0Zm9saW9AZ21haWwuY29t'); return true;">Mail</a>
+      </div>
+      <div class="row">
+        <svg class="row-icon" width="14" height="18" viewBox="0 0 11 14" fill="none" aria-hidden="true">
+          <path d="M6.11649 13.6854C7.57118 11.9254 10.8889 7.65967 10.8889 5.26362C10.8889 2.35766 8.45023 0 5.44444 0C2.43866 0 0 2.35766 0 5.26362C0 7.65967 3.31771 11.9254 4.7724 13.6854C5.12118 14.1049 5.76771 14.1049 6.11649 13.6854ZM5.44444 3.50908C5.92576 3.50908 6.38737 3.69393 6.72771 4.02297C7.06806 4.35201 7.25926 4.79829 7.25926 5.26362C7.25926 5.72895 7.06806 6.17523 6.72771 6.50427C6.38737 6.83331 5.92576 7.01816 5.44444 7.01816C4.96313 7.01816 4.50152 6.83331 4.16118 6.50427C3.82083 6.17523 3.62963 5.72895 3.62963 5.26362C3.62963 4.79829 3.82083 4.35201 4.16118 4.02297C4.50152 3.69393 4.96313 3.50908 5.44444 3.50908Z" fill="#2D2C2C"/>
+        </svg>
+        <span class="divider"></span>
+        <span>Berlin</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})" aria-label="Nach oben scrollen">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <p class="copyright">© <span id="copyright-year">2026</span> dotarte. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script src="../shared.js"></script>
+
+</body>
+</html>
