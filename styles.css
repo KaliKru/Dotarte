@@ -71,7 +71,7 @@ a { color: inherit; }
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--ink);
+  background: #383b56;
   display: block;
   flex-shrink: 0;
 }

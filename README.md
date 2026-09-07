@@ -32,9 +32,21 @@ scripts.js            JavaScript der Hauptseite (Karten-Hover/-Fokus, Copyright-
 robots.txt           Suchmaschinen-Sperre (siehe oben)
 images/              Bilder, die nur auf der Hauptseite verwendet werden
 projects/
-  ajar.html           Case Study „Ajar" (ADHS-Begleiter-App)
-  ajar.css            Eigener Stil für die Ajar-Seite (Fraunces/DM Sans, Terrakotta-Akzente)
-  images/             Alle Bilder, die zur Ajar-Seite gehören
+  shared.js           Gemeinsames JS für alle Projekt-Unterseiten (Scroll-Nav, ToC-Scroll-Spy, Copyright-Jahr)
+  ajar/               Case Study „Ajar" (ADHS-Begleiter-App)
+    ajar.html
+    ajar.css           Eigener Stil (Fraunces/DM Sans, Terrakotta-Akzente)
+    images/            Alle Ajar-Bilder
+  seasons/            Case Study „Seasons" (Job-/Reise-App)
+    seasons.html
+    seasons.css        Eigener Stil (Poppins)
+    images/            Alle Seasons-Bilder
+
+**Neues Projekt anlegen:** Einfach einen neuen Ordner nach demselben Muster in `projects/` erstellen (`index.html` + eigenes `.css` + `images/`) — `shared.js` wird automatisch mitgenutzt, kein Duplizieren von JS nötig.
+
+**Wichtige Konvention — Hero-Bild-Höhe (ab Seasons):** `.hero-banner` bekommt bei neuen Projekt-Seiten dasselbe Seitenverhältnis wie Ajars Original-Hero-Bild (`aspect-ratio: 4000 / 1400;` ≈ 2,86:1, plus `object-fit: cover;`) — dadurch ist die Höhe bei jeder Bildschirmgröße exakt proportional identisch zu Ajar, unabhängig vom tatsächlichen Seitenverhältnis des jeweiligen Fotos (wird automatisch mittig zugeschnitten). **Ajar selbst bleibt unverändert** (`height: auto`, eigenes Originalbild ohne Zuschnitt) — diese Regel gilt nur für neue Projekte, die dieselbe Bildhöhe wie Ajar erreichen sollen.
+
+**Wichtige Konvention — Standardfarben (ab Seasons):** Neue Projekt-Seiten übernehmen als Ausgangspunkt die Hauptseiten-Farben für Body (`#e9e7e2`), Hero (`#f8f7f0`) und Content-Karte (`#fdfcf9`) — **außer Ajar**, das bewusst seine eigene, unabhängige Farbpalette behält und davon ausgenommen bleibt.
 ```
 
 ## Tech-Stack
@@ -45,10 +57,12 @@ Fonts werden über Google Fonts eingebunden (im `<head>` jeder Seite verlinkt).
 
 ## Neues Projekt hinzufügen
 
-1. Neuen Unterordner in `projects/` anlegen (z. B. `projects/seasons/` oder `projects/seasons.html` + `projects/seasons.css` direkt in `projects/`, je nachdem wie viele Bilder das Projekt hat)
-2. Auf der Hauptseite (`index.html`) eine der Platzhalter-Karten durch das neue Projekt ersetzen (Bild, Label, Beschreibungstext)
-3. Status-Label setzen: `Concept` (goldener Punkt) für laufende Projekte, `Shipped` (grüner Punkt, Klasse `is-shipped`) für abgeschlossene
+1. Neuen Ordner in `projects/` anlegen, z. B. `projects/neuesprojekt/`, mit `neuesprojekt.html` + eigenem `.css` + `images/` (Dateiname bewusst wie der Ordner benannt, nicht `index.html` — sonst sind bei mehreren offenen Projekten alle Dateien gleich benannt und schwer zu unterscheiden)
+2. `<script src="../shared.js"></script>` einbinden (Nav/Scroll-Verhalten funktioniert dann automatisch mit)
+3. Auf der Hauptseite (`index.html`) eine der Platzhalter-Karten durch das neue Projekt ersetzen (Bild, Label, Beschreibungstext)
+4. Status-Label setzen: `Concept` (goldener Punkt) für laufende Projekte, `Shipped` (grüner Punkt, Klasse `is-shipped`) für abgeschlossene
 
 ## Offene Punkte
 
-- Weitere Projekt-Unterseiten (Seasons, Corporate Identity, Immobilien-Branding) sind auf der Hauptseite als Platzhalter angelegt, eigene Case-Study-Seiten folgen noch
+- **Seasons**: Hero-Section steht, Rest der Case Study folgt noch (Hero-Bild muss lokal unter `projects/seasons/images/hero-banner.png` ergänzt werden)
+- Corporate Identity & Immobilien-Branding sind auf der Hauptseite als Platzhalter angelegt, eigene Case-Study-Seiten folgen noch
