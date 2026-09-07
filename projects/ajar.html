@@ -13,7 +13,7 @@
 <body>
 
 <nav class="pill-nav" id="mainNav">
-  <a href="../index.html" class="logo-dot" aria-label="Zur Startseite"></a>
+  <a href="../../index.html" class="logo-dot" aria-label="Zur Startseite"></a>
 </nav>
 
 <button class="scroll-top-float" id="scrollTopFloat" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})" aria-label="Nach oben scrollen">
@@ -463,47 +463,7 @@
   <p class="copyright">© <span id="copyright-year">2026</span> dotarte. Alle Rechte vorbehalten.</p>
 </footer>
 
-<script>
-  var sections = document.querySelectorAll('.case-content > section[id]');
-  var links = document.querySelectorAll('.toc-link');
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      var link = document.querySelector('.toc-link[data-target="' + entry.target.id + '"]');
-      if (!link) return;
-      if (entry.isIntersecting) {
-        links.forEach(function (l) { l.classList.remove('is-active'); });
-        link.classList.add('is-active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
-
-  sections.forEach(function (section) { observer.observe(section); });
-
-  document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-  var mainNav = document.getElementById('mainNav');
-  var mainNavLink = mainNav.querySelector('a');
-  var scrollTopFloat = document.getElementById('scrollTopFloat');
-  var lastScrollY = window.scrollY;
-
-  window.addEventListener('scroll', function () {
-    var currentScrollY = window.scrollY;
-    var scrollingDown = currentScrollY > lastScrollY;
-
-    if (scrollingDown && currentScrollY > 80) {
-      mainNav.classList.add('nav-hidden');
-      mainNavLink.setAttribute('tabindex', '-1');
-      scrollTopFloat.classList.add('nav-hidden');
-    } else {
-      mainNav.classList.remove('nav-hidden');
-      mainNavLink.removeAttribute('tabindex');
-      scrollTopFloat.classList.remove('nav-hidden');
-    }
-
-    lastScrollY = currentScrollY;
-  }, { passive: true });
-</script>
+<script src="../shared.js"></script>
 
 </body>
 </html>
