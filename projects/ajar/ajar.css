@@ -1058,29 +1058,6 @@
     color: var(--ink);
   }
 
-  .scroll-top {
-    position: absolute;
-    right: clamp(24px, 6vw, 96px);
-    bottom: clamp(32px, 5vw, 56px);
-    width: 44px;
-    height: 44px;
-    border: none;
-    border-radius: 50%;
-    background: var(--bg);
-    box-shadow: var(--card-shadow);
-    cursor: pointer;
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-  }
-
-  .scroll-top:hover {
-    transform: translateY(-2px);
-  }
-
-  .scroll-top svg { width: 20px; height: 20px; }
 
   .scroll-top-float {
     position: fixed;
@@ -1091,10 +1068,10 @@
     height: 44px;
     border: none;
     border-radius: 50%;
-    background: var(--bg-nav);
+    background: #f8f7f0;
     box-shadow: var(--card-shadow);
     cursor: pointer;
-    color: var(--gold);
+    color: #e0b04a;
     display: flex;
     align-items: center;
     justify-content: center;
