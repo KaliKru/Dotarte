@@ -30,7 +30,7 @@ a { color: inherit; }
 
 /* ---------- HERO ---------- */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url("images/hero-photo.jpg") center / cover no-repeat, var(--cream);
+  background: /*linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), */ url("images/hero-photo.jpg") center / cover no-repeat, var(--cream);
   border-radius: 0 0 var(--radius) var(--radius);
   padding: clamp(100px, 12vw, 140px) clamp(24px, 6vw, 96px) clamp(64px, 9vw, 120px);
   box-shadow: var(--card-shadow);
@@ -113,16 +113,24 @@ a { color: inherit; }
   font-size: clamp(40px, 5vw, 56px);
   letter-spacing: -0.01em;
   margin-bottom: 28px;
-  color: #f8f7f0;
+  color: var(--ink);
 }
 
 .hero-content p {
   font-size: clamp(17px, 1.8vw, 20px);
   line-height: 1.6;
-  color: #f8f7f0;
+  color: var(--ink);
   font-weight: 700;
   max-width: 56ch;
   margin-bottom: 36px;
+}
+
+.hero-text-box {
+  background: #ffffff;
+  padding: 8px 12px;
+  width: fit-content;
+  max-width: 640px;
+  border-radius: 8px;
 }
 
 .btn-gold {
@@ -610,4 +618,24 @@ button:focus-visible,
 .project-card:focus-visible {
   outline: 2px solid #383b56;
   outline-offset: 3px;
+}
+
+.hero-content { position: relative; }
+
+.hero-sticky-test {
+  position: absolute;
+  right: clamp(0px, 5vw, 80px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(260px, 38vw, 560px);
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  .hero-sticky-test {
+    position: static;
+    display: block;
+    transform: none;
+    margin: 32px auto 0;
+  }
 }
