@@ -3,6 +3,28 @@
 // page (e.g. Seasons currently has no ToC/footer while its hero is
 // being built), so this one file works for pages at any stage.
 
+// --- ToC auto-build ---
+// If a page has <ul class="toc-list" data-auto>, the links are generated from
+// the sections (.case-content > section[id]). Label = data-toc on the section,
+// otherwise its .section-eyebrow heading. Pages with a hand-written ToC
+// (Ajar, Seasons) are not touched.
+var autoToc = document.querySelector('.toc-list[data-auto]');
+if (autoToc) {
+  document.querySelectorAll('.case-content > section[id]').forEach(function (sec) {
+    var heading = sec.querySelector('.section-eyebrow');
+    var label = sec.getAttribute('data-toc') || (heading ? heading.textContent.trim() : '');
+    if (!label) return;
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = '#' + sec.id;
+    a.className = 'toc-link';
+    a.setAttribute('data-target', sec.id);
+    a.textContent = label;
+    li.appendChild(a);
+    autoToc.appendChild(li);
+  });
+}
+
 // --- ToC scroll-spy (only active if a ToC + sectioned content exist) ---
 var sections = document.querySelectorAll('.case-content > section[id]');
 var links = document.querySelectorAll('.toc-link');
