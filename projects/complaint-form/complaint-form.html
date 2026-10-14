@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint-Management-Formular — UX Case</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="complaint-form.css">
+</head>
+<body>
+
+<nav class="pill-nav" id="mainNav">
+  <a href="../../index.html" class="logo-dot" aria-label="Zur Startseite"></a>
+</nav>
+
+<button class="scroll-top-float" id="scrollTopFloat" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})" aria-label="Nach oben scrollen">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<section class="hero-section" id="top">
+  <div class="hero-inner">
+    <div class="hero-media">
+      <img class="hero-banner" src="images/hero-banner.jpg" alt="Handgezeichnete Skizze: ein langes, offenes Formular wird zu einer kurzen Auswahl">
+    </div>
+
+    <p class="eyebrow">· UX Case Study — Formular &amp; Prozess ·</p>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="headline-font">Ein offenes Formular schickte alle Meldungen an ein einziges Team, das sie erst sortieren musste. Ich habe die Sortierung ins Formular verlegt: Jetzt landet jede Meldung direkt beim zuständigen Team, und die Reaktionszeit ist im Schnitt um ca. 50&nbsp;% kürzer.</h1>
+      </div>
+
+      <div class="meta-columns">
+        <div class="meta-col">
+          <div class="meta-block">
+            <h3>Rolle</h3>
+            <ul><li>UX Design</li></ul>
+          </div>
+          <div class="meta-block">
+            <h3>Aufgaben</h3>
+            <ul><li>Formular-Konzept</li></ul>
+          </div>
+        </div>
+        <div class="meta-col">
+          <div class="meta-block">
+            <h3>Zeitraum</h3>
+            <ul><li>2 Werktage</li></ul>
+          </div>
+          <div class="meta-block">
+            <h3>Tools</h3>
+            <ul><li>Figma</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="case-section">
+  <div class="case-layout">
+
+    <aside class="toc">
+      <details class="toc-details" open>
+        <summary class="toc-toggle">
+          Inhaltsverzeichnis
+          <svg class="toc-toggle-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <!-- Wird automatisch aus den Abschnitten unten gebaut (shared.js) -->
+        <ul class="toc-list" data-auto></ul>
+      </details>
+    </aside>
+
+    <div class="case-content">
+
+    <section class="block" id="problem">
+      <h2 class="section-eyebrow">Das Problem</h2>
+      <p>Meldungen blieben zu lange bei einem Team liegen, das für die meisten gar nicht zuständig war. Das alte Formular fragte nur nach Kontaktdaten, Titel und Nachricht. Alles landete in einem Eingang, wo ein Team jede Meldung lesen, zuordnen und weiterleiten musste.</p>
+      <p>Darunter litten zwei Seiten:</p>
+      <ul class="plain-list">
+        <li><strong>Das Eingangsteam</strong> musste jede Meldung erst sortieren und hatte den Eindruck, dass viele davon gar nicht zu ihm gehörten. Es hat selbst um eine Lösung gebeten.</li>
+        <li><strong>Die zuständigen Teams</strong> bekamen Meldungen erst spät. Manche eskalierten, während sie noch auf die Weiterleitung warteten.</li>
+      </ul>
+      <p><strong>Wer beteiligt ist:</strong> Das Formular nutzen die Mitarbeitenden einer Zeitarbeitsagentur, um Beschwerden zu melden. Bearbeitet werden die Meldungen vor allem von Operations und Finance. Allein in Operations gibt es rund 10 Manager:innen für verschiedene Projekte und Standorte.</p>
+    </section>
+
+    <section class="block" id="ursache" data-toc="Ursache">
+      <h2 class="section-eyebrow">Die eigentliche Ursache</h2>
+      <p>Das Problem war nicht das Formular selbst, sondern der Umweg. Das Wissen, wohin eine Meldung gehört, steckte nur in den Köpfen des Eingangsteams. Das Formular stellte keine einzige Frage, die beim Zuordnen hilft. Also musste die Zuordnung passieren, bevor die Meldung abgeschickt wird.</p>
+
+      <figure class="flow" aria-label="Weg einer Meldung, vorher und nachher">
+        <div class="flow-cards">
+          <div class="flow-card">
+            <span class="flow-tag">Vorher</span>
+            <p class="flow-form"><strong>Formular</strong><span>Name, Titel, Nachricht</span></p>
+            <ul class="flow-list">
+              <li><strong>Eingangsteam</strong><span>liest und sortiert von Hand</span></li>
+              <li><strong>Zuständiges Team</strong><span>bekommt die Meldung spät</span></li>
+            </ul>
+          </div>
+          <div class="flow-card flow-card--goal">
+            <span class="flow-tag">Nachher</span>
+            <p class="flow-form"><strong>Formular</strong><span>Auswahl der Hauptkategorie</span></p>
+            <ul class="flow-list">
+              <li><strong>Zuständiges Team</strong><span>bekommt die Meldung sofort, automatisch zugeordnet</span></li>
+            </ul>
+          </div>
+        </div>
+      </figure>
+
+      <p>Der Zwischenschritt beim Eingangsteam fällt weg: Die gewählte Kategorie bestimmt, welches Team die Meldung bekommt.</p>
+
+      <!--
+      <figure class="shot-pair">
+        <img src="images/form-alt.png" alt="Altes Formular mit Name, Titel und Nachricht">
+        <img src="images/form-neu.png" alt="Neues Formular mit Hauptkategorien">
+      </figure>
+      -->
+    </section>
+
+    <section class="block" id="vorgehen">
+      <h2 class="section-eyebrow">Vorgehen</h2>
+      <p>Die Kategorien kommen aus den Teams selbst, nicht vom Schreibtisch.</p>
+      <ol class="steps">
+        <li><strong>Teams befragt:</strong> In Interviews und einem Workshop hat jedes Team aufgeschrieben, welche Themen am häufigsten bei ihm ankommen.</li>
+        <li><strong>Themen zugeordnet:</strong> Gemeinsam haben wir jedes Thema dem Team zugeordnet, das es bearbeiten soll.</li>
+        <li><strong>Hauptkategorien gebildet:</strong> Aus den Themen wurden Hauptkategorien mit Unterpunkten. Jede Auswahl führt direkt zum zuständigen Team.</li>
+      </ol>
+    </section>
+
+    <section class="block" id="entscheidungen">
+      <h2 class="section-eyebrow">Entscheidungen</h2>
+      <div class="decision-cards">
+        <div class="decision-card">
+          <h3>Die Teams definieren die Themen, nicht ich.</h3>
+          <p>Sie wissen, was wirklich ankommt. Von außen geratene Kategorien hätten wieder falsch zugeordnete Meldungen erzeugt.</p>
+        </div>
+        <div class="decision-card">
+          <h3>Erst wenige Optionen, dann die Details.</h3>
+          <p>Wer etwas meldet, soll schnell wählen können und nicht die Organisation kennen müssen. Deshalb zeigt das Formular zuerst nur wenige Hauptkategorien und die passenden Unterpunkte erst nach der ersten Wahl (Progressive Disclosure). Weniger Optionen auf einmal heißen kürzere Entscheidungszeit (Hick’s Law).</p>
+        </div>
+        <div class="decision-card">
+          <h3>Die Kategorie entscheidet über den Weg.</h3>
+          <p>Die Zuordnung passiert im System beim Absenden, nicht mehr von Hand im Eingangsteam.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="ergebnis">
+      <h2 class="section-eyebrow">Ergebnis</h2>
+      <div class="stat">
+        <span class="stat-number headline-font">50&nbsp;%</span>
+        <p>kürzere Reaktionszeit auf eine Meldung, im Monatsvergleich und im Schnitt. Weil die Meldungen im System liefen, ließ sich genau messen, wann eine Meldung einging und wann das zuständige Team reagierte.</p>
+      </div>
+      <p><strong>Eine Überraschung:</strong> Das Eingangsteam wurde weniger entlastet als erhofft. Es war davon ausgegangen, dass es viele Meldungen weiterleitet. Die Daten zeigten aber: Rund 60&nbsp;% der Meldungen gehören tatsächlich zu diesem Team. Trotzdem arbeitet es jetzt schneller, weil die Meldungen gefiltert und kategorisiert ankommen und sich leicht priorisieren lassen.</p>
+    </section>
+
+    <section class="block" id="learning" data-toc="Learning">
+      <h2 class="section-eyebrow">Was ich daraus mitnehme</h2>
+      <ul class="plain-list">
+        <li>Oft liegt das Problem nicht im Interface, sondern im Prozess dahinter. Ein Formular kann einen ganzen Arbeitsschritt übernehmen, wenn es zur richtigen Zeit die richtige Frage stellt.</li>
+        <li>Wie ein Team seine Arbeit wahrnimmt, ist eine Annahme. Erst die Daten haben gezeigt, dass der Gewinn nicht im Weiterleiten lag, sondern im Priorisieren.</li>
+      </ul>
+    </section>
+
+    </div>
+
+  </div>
+</main>
+
+<footer class="contact-section" id="kontakt">
+  <div class="contact-inner">
+    <div>
+      <h2 class="headline-font">Let's stay in touch</h2>
+      <p>Du möchtest mehr aus meinem Portfolio sehen, hast Fragen oder ein Projekt, bei dem ich mitwirken könnte? Ich freue mich, von dir zu hören.</p>
+    </div>
+
+    <div class="contact-list">
+      <div class="row">
+        <img class="row-icon" src="../../images/icon-linkedin.png" alt="" aria-hidden="true">
+        <span class="divider"></span>
+        <a href="https://linkedin.com/in/DEIN-PROFIL" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <div class="row">
+        <svg class="row-icon" width="14" height="18" viewBox="0 0 11 14" fill="none" aria-hidden="true">
+          <path d="M6.11649 13.6854C7.57118 11.9254 10.8889 7.65967 10.8889 5.26362C10.8889 2.35766 8.45023 0 5.44444 0C2.43866 0 0 2.35766 0 5.26362C0 7.65967 3.31771 11.9254 4.7724 13.6854C5.12118 14.1049 5.76771 14.1049 6.11649 13.6854ZM5.44444 3.50908C5.92576 3.50908 6.38737 3.69393 6.72771 4.02297C7.06806 4.35201 7.25926 4.79829 7.25926 5.26362C7.25926 5.72895 7.06806 6.17523 6.72771 6.50427C6.38737 6.83331 5.92576 7.01816 5.44444 7.01816C4.96313 7.01816 4.50152 6.83331 4.16118 6.50427C3.82083 6.17523 3.62963 5.72895 3.62963 5.26362C3.62963 4.79829 3.82083 4.35201 4.16118 4.02297C4.50152 3.69393 4.96313 3.50908 5.44444 3.50908Z" fill="#2D2C2C"/>
+        </svg>
+        <span class="divider"></span>
+        <span>Berlin</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="copyright">© <span id="copyright-year">2026</span> dotarte. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script src="../shared.js"></script>
+
+</body>
+</html>
