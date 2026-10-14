@@ -321,6 +321,7 @@ a { color: inherit; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  line-height: 1;
   color: var(--ink-soft);
   margin-bottom: 10px;
 }
@@ -637,5 +638,29 @@ button:focus-visible,
     display: block;
     transform: none;
     margin: 32px auto 0;
+  }
+}
+
+/* ---------- COMPLAINT-FORM CARD: image placeholder ---------- */
+.card-media-placeholder {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey-bg);
+  border-radius: 10px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+/* single large card in its own row: same width as the other large cards, left-aligned */
+.portfolio-row--single .project-card.card-large {
+  flex: 0 0 calc(68% - clamp(20px, 3vw, 32px));
+}
+
+@media (max-width: 780px) {
+  .portfolio-row--single .project-card.card-large {
+    flex: 0 0 auto;
   }
 }
