@@ -52,6 +52,7 @@ if (copyrightYear) {
 
 // --- Fixed nav + floating scroll-to-top: hide on scroll down, show on scroll up ---
 var mainNav = document.getElementById('mainNav');
+var langNav = document.getElementById('langNav');
 var scrollTopFloat = document.getElementById('scrollTopFloat');
 
 if (mainNav) {
@@ -64,10 +65,12 @@ if (mainNav) {
 
     if (scrollingDown && currentScrollY > 80) {
       mainNav.classList.add('nav-hidden');
+      if (langNav) langNav.classList.add('nav-hidden');
       if (mainNavLink) mainNavLink.setAttribute('tabindex', '-1');
       if (scrollTopFloat) scrollTopFloat.classList.add('nav-hidden');
     } else {
       mainNav.classList.remove('nav-hidden');
+      if (langNav) langNav.classList.remove('nav-hidden');
       if (mainNavLink) mainNavLink.removeAttribute('tabindex');
       if (scrollTopFloat) scrollTopFloat.classList.remove('nav-hidden');
     }
@@ -75,3 +78,11 @@ if (mainNav) {
     lastScrollY = currentScrollY;
   }, { passive: true });
 }
+
+// E-Mail-Link: Adresse liegt Base64-codiert im data-mail-Attribut und wird erst beim Klick zusammengesetzt
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[data-mail]');
+  if (!a) return;
+  e.preventDefault();
+  try { window.location.href = 'mailto:' + atob(a.dataset.mail); } catch (err) {}
+});
