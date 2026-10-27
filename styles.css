@@ -236,6 +236,16 @@ a { color: inherit; }
   display: block;
 }
 
+/* Hintergrundfarbe aus dem Hero-Bild von Schreibheft, damit das Bild nahtlos anschließt */
+.card-media--green { background: #496a4c; }
+
+.card-media--green img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .ajar-preview {
   display: flex;
   gap: 12px;
@@ -311,6 +321,9 @@ a { color: inherit; }
 }
 
 .card-status.is-shipped::before { background: #6f8f5c; }
+
+/* Side Project: Navy-Punkt (Farbe aus der Startseiten-Palette) */
+.card-status.is-side::before { background: #383b56; }
 
 .card-text { margin: 0; }
 
