@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recruiting-App — Zurück in den Job, ohne neue Bewerbung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="en" href="../../en/projects/recruiting-app/recruiting-app.html">
+<link rel="stylesheet" href="recruiting-app.css">
+</head>
+<body>
+
+<nav class="pill-nav" id="mainNav">
+  <a href="../../index.html" class="logo-dot" aria-label="Zur Startseite"></a>
+</nav>
+
+<nav class="pill-nav lang-nav" id="langNav">
+  <ul class="lang-switch">
+    <li><a href="recruiting-app.html" lang="de" hreflang="de" aria-label="Deutsch" aria-current="true">DE</a></li>
+    <li aria-hidden="true">|</li>
+    <li><a href="../../en/projects/recruiting-app/recruiting-app.html" lang="en" hreflang="en" aria-label="English">EN</a></li>
+  </ul>
+</nav>
+
+<button class="scroll-top-float" id="scrollTopFloat" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})" aria-label="Nach oben scrollen">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<section class="hero-section" id="top">
+  <div class="hero-inner">
+    <div class="hero-media">
+      <!-- Hero geteilt: links Foto, rechts Handy. Die Karte auf der Startseite zeigt weiter nur das Handy (hero-banner.jpg). -->
+      <div class="hero-banner hero-banner--split">
+        <div class="hero-split-photo"><img src="images/hero-person.jpg" alt="Lächelnde Mitarbeiterin mit Laptop an einem Bürofenster"></div>
+        <div class="hero-split-phone"><img src="images/hero-banner.jpg" alt="Die Recruiting-App auf dem Handy: Hinweis, dass das Projekt in 35 Tagen endet, und drei Optionen zur Auswahl: später verfügbar, am aktuellen Standort weiterarbeiten oder Standort wechseln"></div>
+      </div>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">Case Study · Recruiting-App</p>
+        <h1 class="headline-font hero-title">Zurück in den Job, ohne neue Bewerbung</h1>
+        <p class="hero-subtitle">Wie eine App für Rückkehrer den Recruiting-Aufwand gesenkt hat.</p>
+      </div>
+
+      <div class="meta-columns">
+        <div class="meta-col">
+          <div class="meta-block">
+            <h3>Kunde</h3>
+            <ul><li>Zeitarbeitsagentur</li></ul>
+          </div>
+          <div class="meta-block">
+            <h3>Nutzer</h3>
+            <ul><li>Zeitarbeitskräfte</li><li>Recruiting-Team</li></ul>
+          </div>
+          <div class="meta-block">
+            <h3>Rolle</h3>
+            <ul><li>UX Designer</li></ul>
+          </div>
+        </div>
+        <div class="meta-col">
+          <div class="meta-block">
+            <h3>Ziel</h3>
+            <ul><li>Recruiting effizienter machen</li><li>Einstellungskosten senken</li></ul>
+          </div>
+          <div class="meta-block">
+            <h3>Methoden &amp; Tools</h3>
+            <ul><li>Design Thinking</li><li>Figma, Affinity</li><li>Design System</li></ul>
+          </div>
+          <div class="meta-block">
+            <h3>Status</h3>
+            <ul><li class="status-shipped"><span class="status-dot" aria-hidden="true"></span>Shipped</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="case-section">
+  <div class="case-layout">
+
+    <aside class="toc">
+      <details class="toc-details" open>
+        <summary class="toc-toggle">
+          Inhaltsverzeichnis
+          <svg class="toc-toggle-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <!-- Wird automatisch aus den Abschnitten unten gebaut (shared.js) -->
+        <ul class="toc-list" data-auto></ul>
+      </details>
+    </aside>
+
+    <div class="case-content">
+
+    <section class="block" id="ausgangslage">
+      <h2 class="section-eyebrow">Ausgangslage</h2>
+      <p>Die Agentur hatte ein neues internes System eingeführt, das die wichtigsten Abteilungen verbindet. Als Nächstes sollte das Recruiting-Team angebunden werden, mit seinem eigenen Ticketsystem.</p>
+      <p>Der Rahmen war eng:</p>
+      <div class="mini-cards mini-cards--color">
+        <div class="decision-card">
+          <h3>Zeit</h3>
+          <p>Stellen müssen oft innerhalb eines Tages besetzt werden.</p>
+        </div>
+        <div class="decision-card">
+          <h3>Sensible Daten</h3>
+          <p>Es geht um Personaldaten.</p>
+        </div>
+        <div class="decision-card">
+          <h3>Feste Zyklen</h3>
+          <p>Ein Einsatz dauert höchstens 9 Monate, danach folgen 3 Monate Pause, bevor jemand zurückkehren darf.</p>
+        </div>
+      </div>
+
+      <figure class="shot shot--board">
+        <img src="images/team-goals.png" width="1800" height="1133" loading="lazy" alt="Sticky-Notes-Board zu den Zielen der Teams: Die zweite Phase des internen Systems betrifft das Recruiting-Team, das Operations-Team und Business, Marketing und Sales. Recruiting will passende Kandidat:innen finden, Operations will viele neue Mitarbeitende schnell einstellen, Business will Geld sparen bei Anzeigen, Prozess und Zeit. Alle Wege führen zu einem Ziel: Einstellungskosten senken.">
+        <figcaption>Die Ziele der beteiligten Teams: Unterm Strich wollten alle die Einstellungskosten senken.</figcaption>
+      </figure>
+
+      <p>Bevor ich mit dem Design anfing, habe ich mir den Recruiting-Prozess genau angesehen. Jede Person durchlief denselben Weg: Anzeige, Website, Formular, kompletter Bewerbungsprozess. Auch Menschen, die schon für uns gearbeitet hatten.</p>
+
+      <figure class="shot flow-figure">
+        <button class="zoom-trigger" type="button" aria-describedby="flow-desc" data-zoom-src="images/process-old-large.png" data-zoom-close="Schließen" aria-label="Prozess-Grafik groß öffnen">
+          <img src="images/process-old.png" width="2800" height="997" loading="lazy" alt="Prozess-Grafik: Kandidat:innen sehen die Anzeige, gehen auf die Website, füllen das Formular aus und durchlaufen den normalen Recruiting-Prozess bis zum Ticket beim Recruiting-Team. Dann beginnt der Einsatz. Nach 9 Monaten gibt es drei Wege: Standort wechseln, Übernahme durch den Kunden oder nach Hause. Wer nach 3 Monaten Pause zurück will, bewirbt sich neu und fängt wieder bei der Website an. Handschriftliche Notiz daneben: why?">
+          <span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Vergrößern</span>
+        </button>
+        <p class="visually-hidden" id="flow-desc">Prozess-Grafik: Kandidat:innen sehen die Anzeige, gehen auf die Website, füllen das Formular aus und durchlaufen den normalen Recruiting-Prozess bis zum Ticket beim Recruiting-Team. Dann beginnt der Einsatz. Nach 9 Monaten gibt es drei Wege: Standort wechseln, Übernahme durch den Kunden oder nach Hause. Wer nach 3 Monaten Pause zurück will, bewirbt sich neu und fängt wieder bei der Website an. Handschriftliche Notiz daneben: why?</p>
+        <figcaption>Wer nach der Pause zurückkommen will, bewirbt sich neu, als wäre er nie da gewesen.</figcaption>
+      </figure>
+    </section>
+
+    <section class="block" id="insight">
+      <h2 class="section-eyebrow">Insight</h2>
+      <div class="insight">
+        <p class="insight-lead">Das warf Fragen auf:</p>
+        <ul class="insight-questions">
+          <li>Wie viele kommen nach der Pause zurück?</li>
+          <li>Wie groß ist ihr Anteil?</li>
+          <li>Und warum durchlaufen sie den gleichen Prozess wie neue Bewerber?</li>
+        </ul>
+        <ul class="insight-stats">
+          <li><span class="insight-number">60&nbsp;%</span>kehren nach der Pause ins selbe Projekt zurück</li>
+          <li><span class="insight-number">5&nbsp;%</span>werden vom Kunden direkt übernommen</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="umfrage">
+      <h2 class="section-eyebrow">Was Rückkehrer wollen</h2>
+      <p>Wir haben Mitarbeitende befragt, deren Einsatz bald endete.</p>
+
+      <div class="voice">
+        <div class="voice-stat">
+          <span class="voice-number">94&nbsp;%</span>
+          <p class="voice-caption">würden eine App nutzen, um früher an neue Angebote zu kommen.</p>
+          <p class="voice-source">Umfrage: 47 von 50 Befragten</p>
+        </div>
+        <div class="quote-block">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>Ja, ich will als Erste:r von neuen Jobangeboten erfahren.</blockquote>
+          <span class="quote-mark close" aria-hidden="true">&rdquo;</span>
+        </div>
+      </div>
+
+      <p class="needs-intro">Außerdem zeigte die Befragung drei Wünsche:</p>
+      <div class="needs">
+        <div class="need-card"><p>Sich sicher fühlen</p></div>
+        <div class="need-card"><p>Einfach wieder einsteigen</p></div>
+        <div class="need-card"><p>Sich wertgeschätzt fühlen</p></div>
+      </div>
+
+      <p class="conclusion">Statt nur ein Ticketsystem anzubinden, lohnte es sich, sich auf die Rückkehrer zu konzentrieren.</p>
+    </section>
+
+    <section class="block" id="frage" data-toc="Frage und Idee">
+      <h2 class="section-eyebrow">Von der Frage zur Idee</h2>
+      <p>In einem Design-Thinking-Workshop haben wir die Aufgabe als Frage formuliert und daraus die Idee entwickelt.</p>
+      <div class="big-cards">
+        <div class="big-card">
+          <h3 class="big-card-label">Wie können wir …?</h3>
+          <p class="big-card-text">Wie können wir dem Recruiting-Team helfen, Mitarbeitende, die nach der Pause weitermachen wollen, wieder einzusetzen, damit Stellen schneller und effizienter besetzt werden?</p>
+        </div>
+        <div class="big-card">
+          <h3 class="big-card-label">Die Idee</h3>
+          <p class="big-card-text">Eine App, die Mitarbeitende nach Projektende direkt mit neuen Angeboten verbindet. Ohne neue Bewerbung, ohne den Prozess von vorne.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="user-flow">
+      <h2 class="section-eyebrow">User Flow</h2>
+      <p>Der Weg für Rückkehrer ist kurz: anmelden, Status aktualisieren, Angebot bekommen, bestätigen. Das Herzstück ist der Status: Bereits geprüfte Mitarbeitende wählen mit einem Tipp, wie es für sie weitergeht. Die Daten gehen direkt ins interne System, das Recruiting-Team muss sie nicht neu erfassen.</p>
+      <figure class="shot user-flow">
+        <ol class="uf" aria-label="User Flow für Rückkehrer">
+          <li class="uf-step uf-step--app"><span class="uf-num" aria-hidden="true">1</span><span class="uf-text">Anmelden</span></li>
+          <li class="uf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="uf-step uf-step--app uf-step--key"><span class="uf-num" aria-hidden="true">2</span><span class="uf-text">Status aktualisieren</span>
+            <ul class="uf-options" aria-label="Eine von drei Optionen">
+              <li>Ich will im Projekt X weitermachen</li>
+              <li>Ich will in ein anderes Projekt wechseln</li>
+              <li>Wieder verfügbar ab TT.MM.JJJJ</li>
+            </ul>
+          </li>
+          <li class="uf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="uf-step uf-step--app"><span class="uf-num" aria-hidden="true">3</span><span class="uf-text">Angebot bekommen</span></li>
+          <li class="uf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="uf-step uf-step--app"><span class="uf-num" aria-hidden="true">4</span><span class="uf-text">Bestätigen</span></li>
+          <li class="uf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="uf-step uf-step--sys"><span class="uf-text">Buchung landet im internen System</span></li>
+        </ol>
+        <figcaption class="uf-legend"><span class="uf-legend-item"><span class="uf-key uf-key--app"></span>In der App</span><span class="uf-legend-item"><span class="uf-key uf-key--sys"></span>Im internen System, ohne neue Erfassung</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="block" id="risiko">
+      <h2 class="section-eyebrow">Das größte Risiko</h2>
+      <div class="risk">
+        <h3 class="risk-title">Kurzfristige Absagen</h3>
+        <p>Aus der Erfahrung vor der App wussten wir: Selbst wer gestern einen Vertrag unterschrieben hat, erscheint morgen nicht immer zur Arbeit. Bucht jemand einen Platz zum Beispiel zwei Wochen im Voraus, steigt dieses Risiko.</p>
+        <h3 class="risk-title">Lösung in der App</h3>
+        <p>Deshalb bekommen Nutzer:innen kurz vor Projektstart eine Erinnerung. So sieht das Recruiting-Team früh, ob jemand es sich kurzfristig anders überlegt hat.</p>
+        <h3 class="risk-title">Vorteil: Vertrauen</h3>
+        <p>Bei Rückkehrern ist das Risiko ohnehin geringer als bei neuen Bewerber:innen, denn sie kennen das Projekt und die Abläufe schon. Dass Stellen mit denselben Menschen besetzt werden, senkt es sogar zusätzlich.</p>
+      </div>
+    </section>
+
+    <section class="block" id="screens">
+      <h2 class="section-eyebrow">Prototyp testen</h2>
+      <p>Den Prototyp haben wir mit Mitarbeitenden getestet, deren Einsatz bald endete, also genau in dem Moment, in dem sie über den nächsten Schritt nachdenken. Sie sind die Screens auf dem eigenen Handy durchgegangen.</p>
+      <p>Uns interessierte:</p>
+      <ul class="test-questions">
+        <li>Ist jeder Schritt verständlich?</li>
+        <li>Ist die App leicht genug, damit niemand aufgibt?</li>
+        <li>Würden sie Benachrichtigungen erlauben?</li>
+      </ul>
+
+      <figure class="screens before-after">
+        <div class="ba-item">
+          <span class="ba-tag">Vorher</span>
+          <img src="images/test-1-before.png" width="750" height="1624" loading="lazy" alt="Vorher: Auswahl-Screen mit drei Optionen, der Radio-Button sitzt innerhalb der jeweiligen Optionsfläche">
+        </div>
+        <div class="ba-item ba-item--after">
+          <span class="ba-tag">Nachher</span>
+          <img src="images/test-1-after.png" width="750" height="1624" loading="lazy" alt="Nachher: derselbe Screen, der Radio-Button steht jetzt rechts außerhalb der Optionsfläche">
+        </div>
+        <p class="ba-note ba-note--1"><strong>Radio-Buttons:</strong> Wir haben Radio-Buttons gewählt, damit klar ist, dass nur eine Option möglich ist. Im Test war die Auswahl intuitiver, wenn der Button außerhalb der Fläche stand.</p>
+        <div class="ba-item">
+          <span class="ba-tag">Vorher</span>
+          <img src="images/test-2-before.png" width="750" height="1624" loading="lazy" alt="Vorher: Status-Screen mit drei Meldungen, die Häkchen und Punkte stehen frei ohne Kreis">
+        </div>
+        <div class="ba-item ba-item--after">
+          <span class="ba-tag">Nachher</span>
+          <img src="images/test-2-after.png" width="750" height="1624" loading="lazy" alt="Nachher: derselbe Screen, Häkchen und Punkte stehen jetzt in gefüllten Kreisen">
+        </div>
+        <p class="ba-note ba-note--2"><strong>Bestätigungen:</strong> Im Test sollte die Bestätigung deutlicher sichtbar sein. Deshalb stehen die Häkchen und der Wartestatus jetzt in einem gefüllten Kreis.</p>
+        <figcaption>Vorher und nachher: was wir nach dem Test geändert haben.</figcaption>
+      </figure>
+
+      <!-- Demo-Video (vorerst ausgeblendet, kommt später):
+      <figure class="demo">
+        <div class="demo-frame">
+          <video src="images/recruiting-app-demo.mp4" poster="images/recruiting-app-demo-poster.jpg" muted loop playsinline preload="metadata" aria-label="Demo: ein Angebot öffnen und einen Platz buchen"></video>
+          <button class="demo-toggle" type="button" data-play="Video abspielen" data-pause="Video pausieren" aria-label="Video abspielen">
+            <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>
+          </button>
+        </div>
+        <figcaption>Vom Angebot zum gebuchten Platz.</figcaption>
+      </figure>
+      -->
+    </section>
+
+    <section class="block" id="ergebnis">
+      <h2 class="section-eyebrow">Ergebnis</h2>
+      <p>Mitarbeitende, die ein Projekt abgeschlossen haben, sehen neue Angebote früher und buchen ihren nächsten Einsatz direkt, ohne sich neu zu bewerben.</p>
+      <div class="mini-cards result-cards">
+        <div class="decision-card">
+          <span class="result-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3>Weniger Recruiting-Aufwand</h3>
+          <p>Das Recruiting-Team nutzt den vorhandenen Pool, statt für jede Stelle neu zu suchen.</p>
+        </div>
+        <div class="decision-card">
+          <span class="result-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3>Weniger Aufwand für Bewerber</h3>
+          <p>Kein neues Formular, kein kompletter Bewerbungsprozess.</p>
+        </div>
+        <div class="decision-card">
+          <span class="result-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3>Stabilere Besetzung</h3>
+          <p>Plätze gehen an Menschen, die das Projekt und die Abläufe schon kennen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="gelernt">
+      <h2 class="section-eyebrow">Was ich gelernt habe</h2>
+      <div class="learn-cards">
+        <div class="learn-card">
+          <span class="learn-number" aria-hidden="true">1</span>
+          <h3>Den Auftrag hinterfragen.</h3>
+          <p>Die eigentliche Aufgabe war ein Ticketsystem. Erst der Blick auf den bestehenden Prozess hat gezeigt, wo der größere Hebel liegt.</p>
+        </div>
+        <div class="learn-card">
+          <span class="learn-number" aria-hidden="true">2</span>
+          <h3>Veränderung braucht Zeit.</h3>
+          <p>Teams, die an feste Abläufe gewöhnt sind, wechseln nicht sofort. Neue Wege müssen begleitet werden.</p>
+        </div>
+      </div>
+    </section>
+
+    </div>
+
+  </div>
+</main>
+
+<div class="next-case">
+  <a class="next-case-link" href="../ajar/ajar.html">Nächste Case Study →</a>
+</div>
+
+<footer class="contact-section" id="kontakt">
+  <div class="contact-inner">
+    <div>
+      <h2 class="headline-font">Lass uns in Kontakt bleiben</h2>
+      <p>Du suchst eine Product Designerin für dein Team? Ich freue mich, von dir zu hören.</p>
+    </div>
+
+    <div class="contact-list">
+      <div class="row">
+        <svg class="row-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D2C2C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <span class="divider"></span>
+        <a href="#" data-mail="ZG90YXJ0ZS5wb3J0Zm9saW9AZ21haWwuY29t">E-Mail</a>
+      </div>
+      <!-- LinkedIn (vorübergehend ausgeblendet)
+      <div class="row">
+        <img class="row-icon" src="../../images/icon-linkedin.png" alt="" aria-hidden="true">
+        <span class="divider"></span>
+        <a href="https://linkedin.com/in/DEIN-PROFIL" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      -->
+      <div class="row">
+        <svg class="row-icon" width="14" height="18" viewBox="0 0 11 14" fill="none" aria-hidden="true">
+          <path d="M6.11649 13.6854C7.57118 11.9254 10.8889 7.65967 10.8889 5.26362C10.8889 2.35766 8.45023 0 5.44444 0C2.43866 0 0 2.35766 0 5.26362C0 7.65967 3.31771 11.9254 4.7724 13.6854C5.12118 14.1049 5.76771 14.1049 6.11649 13.6854ZM5.44444 3.50908C5.92576 3.50908 6.38737 3.69393 6.72771 4.02297C7.06806 4.35201 7.25926 4.79829 7.25926 5.26362C7.25926 5.72895 7.06806 6.17523 6.72771 6.50427C6.38737 6.83331 5.92576 7.01816 5.44444 7.01816C4.96313 7.01816 4.50152 6.83331 4.16118 6.50427C3.82083 6.17523 3.62963 5.72895 3.62963 5.26362C3.62963 4.79829 3.82083 4.35201 4.16118 4.02297C4.50152 3.69393 4.96313 3.50908 5.44444 3.50908Z" fill="#2D2C2C"/>
+        </svg>
+        <span class="divider"></span>
+        <span>Berlin</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="copyright">© <span id="copyright-year">2026</span> dotarte. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script src="../shared.js"></script>
+
+</body>
+</html>

@@ -128,3 +128,39 @@ document.querySelectorAll('.demo-frame').forEach(function (frame) {
 
   updateButton();
 });
+
+// --- Große Ansicht für breite Grafiken (z. B. Prozess-Grafik der Recruiting-App) ---
+// Ein Button mit data-zoom-src öffnet das Bild groß in einem Fenster, in dem man scrollen kann.
+// Schließen: Knopf, Klick neben das Fenster oder Esc.
+document.querySelectorAll('[data-zoom-src]').forEach(function (trigger) {
+  trigger.addEventListener('click', function () {
+    var dialog = document.createElement('dialog');
+    dialog.className = 'zoom-dialog';
+    dialog.setAttribute('aria-label', trigger.getAttribute('aria-label') || '');
+
+    var close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'zoom-close';
+    close.setAttribute('aria-label', trigger.dataset.zoomClose || 'Close');
+    close.innerHTML = '&times;';
+
+    var scroll = document.createElement('div');
+    scroll.className = 'zoom-scroll';
+    scroll.tabIndex = 0;
+    var img = document.createElement('img');
+    img.src = trigger.dataset.zoomSrc;
+    var small = trigger.querySelector('img');
+    img.alt = small ? small.alt : '';
+    scroll.appendChild(img);
+
+    dialog.appendChild(close);
+    dialog.appendChild(scroll);
+    document.body.appendChild(dialog);
+
+    close.addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', function () { dialog.remove(); trigger.focus(); });
+
+    if (dialog.showModal) { dialog.showModal(); } else { window.open(trigger.dataset.zoomSrc, '_blank'); dialog.remove(); }
+  });
+});

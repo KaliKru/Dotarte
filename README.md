@@ -18,7 +18,7 @@ Die E-Mail-Adresse liegt nicht im Klartext im Code, damit sie nicht von Bots aut
 ```js
 btoa("neue-adresse@beispiel.de")
 ```
-Das Ergebnis ersetzt den Wert von `data-mail` im Footer in **allen** Seiten (`index.html`, `projects/ajar/ajar.html`, `projects/complaint-form/complaint-form.html`, `projects/schreibheft/schreibheft.html`, `projects/seasons/seasons.html` und die englischen Seiten in `en/`).
+Das Ergebnis ersetzt den Wert von `data-mail` im Footer in **allen** Seiten (`index.html`, `projects/ajar/ajar.html`, `projects/complaint-form/complaint-form.html`, `projects/schreibheft/schreibheft.html`, `projects/recruiting-app/recruiting-app.html`, `projects/seasons/seasons.html` und die englischen Seiten in `en/`).
 
 ## Struktur
 
@@ -29,7 +29,7 @@ scripts.js          JavaScript der Hauptseite (Copyright-Jahr, Nav-Verhalten, E-
 robots.txt          Suchmaschinen-Sperre (siehe oben)
 images/             Bilder, die nur auf der Hauptseite verwendet werden
 projects/
-  shared.js         Gemeinsames JS für alle Projekt-Unterseiten (Scroll-Nav, ToC, Copyright-Jahr, E-Mail-Link)
+  shared.js         Gemeinsames JS für alle Projekt-Unterseiten (Scroll-Nav, ToC, Copyright-Jahr, E-Mail-Link, Demo-Video, große Bildansicht)
   ajar/             Case Study „Ajar" (ADHS-Begleiter-App)
     ajar.html
     ajar.css        Eigener Stil (Fraunces/DM Sans, Navy-Akzente)
@@ -46,12 +46,17 @@ projects/
     schreibheft.html
     schreibheft.css   Basis wie Complaint, plus eigene Grüntöne aus der App
     images/         Alle Schreibheft-Bilder
+  recruiting-app/   Case Study „Recruiting-App" (App für Rückkehrer in der Zeitarbeit)
+    recruiting-app.html
+    recruiting-app.css  Basis wie Schreibheft, mit Startseiten-Farben
+    images/         Alle Bilder der Recruiting-App
 en/                 Englische Version (gleiche Struktur, nutzt CSS, JS und Bilder der deutschen Seiten)
   index.html
   projects/
     ajar/ajar.html
     complaint-form/complaint-form.html
     schreibheft/schreibheft.html
+    recruiting-app/recruiting-app.html
 archive/            Archiv früherer Bausteine (nicht verlinkt)
 ```
 
@@ -76,4 +81,4 @@ Fonts werden über Google Fonts eingebunden (im `<head>` jeder Seite verlinkt).
 1. Auf der Hauptseite (`index.html`) und in `en/index.html` einen Karten-Block (`<article class="project-card">`) kopieren und anpassen (Label, Bild, Titel mit Link, Status, Beschreibung).
 2. Status-Label setzen: `Concept` (goldener Punkt) für laufende Projekte, `Shipped` (grüner Punkt, Klasse `is-shipped`) für abgeschlossene, `Side Project` (Navy-Punkt, Klasse `is-side`) für eigene Nebenprojekte.
 3. Die Details auf den Karten sind immer sichtbar (kein Hover nötig). Die ganze Karte ist über den Titel-Link klickbar.
-4. Am Ende jeder Case-Study-Seite führt der Button „Nächste Case Study“ zum nächsten Projekt.
+4. Am Ende jeder Case-Study-Seite führt der Button „Nächste Case Study“ zum nächsten Projekt, in derselben Reihenfolge wie auf der Startseite (Recruiting-App → Ajar → Schreibheft → Complaint → Recruiting-App). Ändert sich die Reihenfolge auf der Startseite, müssen diese Buttons mit angepasst werden.
