@@ -18,7 +18,7 @@ Die E-Mail-Adresse liegt nicht im Klartext im Code, damit sie nicht von Bots aut
 ```js
 btoa("neue-adresse@beispiel.de")
 ```
-Das Ergebnis ersetzt den Wert von `data-mail` im Footer in **allen** Seiten (`index.html`, `projects/ajar/ajar.html`, `projects/complaint-form/complaint-form.html`, `projects/seasons/seasons.html`).
+Das Ergebnis ersetzt den Wert von `data-mail` im Footer in **allen** Seiten (`index.html`, `projects/ajar/ajar.html`, `projects/complaint-form/complaint-form.html`, `projects/schreibheft/schreibheft.html`, `projects/seasons/seasons.html` und die englischen Seiten in `en/`).
 
 ## Struktur
 
@@ -42,11 +42,16 @@ projects/
     seasons.html
     seasons.css     Eigener Stil (Poppins)
     images/         Alle Seasons-Bilder
+  schreibheft/      Case Study „Schreibheft" (Schreibtraining für Deutschlernende, Side Project)
+    schreibheft.html
+    schreibheft.css   Basis wie Complaint, plus eigene Grüntöne aus der App
+    images/         Alle Schreibheft-Bilder
 en/                 Englische Version (gleiche Struktur, nutzt CSS, JS und Bilder der deutschen Seiten)
   index.html
   projects/
     ajar/ajar.html
     complaint-form/complaint-form.html
+    schreibheft/schreibheft.html
 archive/            Archiv früherer Bausteine (nicht verlinkt)
 ```
 
@@ -69,6 +74,6 @@ Fonts werden über Google Fonts eingebunden (im `<head>` jeder Seite verlinkt).
 ## Neues Projekt auf der Hauptseite zeigen
 
 1. Auf der Hauptseite (`index.html`) und in `en/index.html` einen Karten-Block (`<article class="project-card">`) kopieren und anpassen (Label, Bild, Titel mit Link, Status, Beschreibung).
-2. Status-Label setzen: `Concept` (goldener Punkt) für laufende Projekte, `Shipped` (grüner Punkt, Klasse `is-shipped`) für abgeschlossene.
+2. Status-Label setzen: `Concept` (goldener Punkt) für laufende Projekte, `Shipped` (grüner Punkt, Klasse `is-shipped`) für abgeschlossene, `Side Project` (Navy-Punkt, Klasse `is-side`) für eigene Nebenprojekte.
 3. Die Details auf den Karten sind immer sichtbar (kein Hover nötig). Die ganze Karte ist über den Titel-Link klickbar.
 4. Am Ende jeder Case-Study-Seite führt der Button „Nächste Case Study“ zum nächsten Projekt.
