@@ -86,3 +86,45 @@ document.addEventListener('click', function (e) {
   e.preventDefault();
   try { window.location.href = 'mailto:' + atob(a.dataset.mail); } catch (err) {}
 });
+
+// --- Demo videos (.demo-frame): play while visible, pause button for accessibility ---
+// With "reduce motion" switched on in the system, the video starts paused (poster image shown).
+document.querySelectorAll('.demo-frame').forEach(function (frame) {
+  var video = frame.querySelector('video');
+  var button = frame.querySelector('.demo-toggle');
+  if (!video || !button) return;
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pausedByUser = reduceMotion;
+
+  function updateButton() {
+    var paused = video.paused;
+    button.classList.toggle('is-paused', paused);
+    button.setAttribute('aria-label', paused ? button.dataset.play : button.dataset.pause);
+  }
+
+  function tryPlay() {
+    var p = video.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+
+  button.addEventListener('click', function () {
+    if (video.paused) { pausedByUser = false; tryPlay(); }
+    else { pausedByUser = true; video.pause(); }
+  });
+  video.addEventListener('play', updateButton);
+  video.addEventListener('pause', updateButton);
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !pausedByUser) tryPlay();
+        else if (!entry.isIntersecting) video.pause();
+      });
+    }, { threshold: 0.3 }).observe(video);
+  } else if (!pausedByUser) {
+    tryPlay();
+  }
+
+  updateButton();
+});
