@@ -1135,3 +1135,35 @@
 .lang-switch a { text-decoration: none; color: var(--ink); }
 .lang-switch a[aria-current="true"] { font-weight: 700; }
 @media (max-width: 480px) { .pill-nav.lang-nav { right: 16px; top: 14px; padding: 8px 14px; } }
+
+  /* ---------- HERO NEU und größere Überschriften (28.10., wie die anderen Cases, in Ajar-Schrift Fraunces) ---------- */
+  .hero-kicker { font-size: 17px; font-weight: 500; letter-spacing: 0.02em; color: var(--navy); margin-bottom: 12px; }
+  .hero-copy .hero-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(40px, 4.7vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+    max-width: none;
+    margin-bottom: 18px;
+  }
+  .hero-subtitle { font-size: clamp(19px, 1.8vw, 24px); line-height: 1.5; color: var(--ink-soft); max-width: 40ch; }
+  .hero-grid { grid-template-columns: 1.9fr 1fr; gap: clamp(32px, 5vw, 72px); }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
+  .meta-columns { margin-top: 6px; }
+
+  /* Abschnitts-Überschriften: vorher kleine Großbuchstaben, jetzt groß in Fraunces und Navy */
+  .section-eyebrow {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(30px, 3.2vw, 44px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    color: var(--navy);
+    margin-bottom: 28px;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+  }

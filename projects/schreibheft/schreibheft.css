@@ -550,3 +550,23 @@ a:focus-visible, button:focus-visible { outline: 2px solid #383b56; outline-offs
 .learn-card h3 { font-size: 18px; line-height: 1.35; color: var(--sh-green); margin-bottom: 10px; }
 .block .learn-card p { font-size: 15.5px; line-height: 1.65; }
 @media (max-width: 760px) { .learn-cards { grid-template-columns: 1fr; } }
+
+/* ---------- SCHRIFTGRÖSSEN: stärkere Hierarchie (28.10., wie Recruiting-App) ----------
+   Abschnitts-Überschriften ca. 2,4x so groß wie der Fließtext, große Titel in Navy.
+   Der Hero-Titel ist hier ein ganzer Satz und behält deshalb seine Größe, nur die Farbe wird Navy. */
+.hero-copy h1 { color: var(--navy); }
+.section-eyebrow { font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 24px; color: var(--navy); }
+.block p, .plain-list, .steps { font-size: 18px; }
+.decision-card h3 { font-size: 21px; }
+.point-list li { font-size: 18px; }
+.decision-cards--grid .decision-card h3 { font-size: 20px; }
+.learn-card h3 { font-size: 22px; }
+.block .learn-card p { font-size: 16.5px; }
+
+/* ---------- HERO NEU (28.10.): kleine Zeile, großer Titel in Navy, kurzer Untertitel (wie Recruiting-App) ---------- */
+.hero-kicker { font-size: 17px; font-weight: 500; letter-spacing: 0.02em; color: var(--navy); margin-bottom: 12px; }
+.hero-copy .hero-title { font-size: clamp(40px, 4.7vw, 68px); line-height: 1.05; letter-spacing: -0.02em; color: var(--navy); margin-bottom: 18px; }
+.hero-subtitle { font-size: clamp(19px, 1.8vw, 24px); line-height: 1.5; color: var(--ink-soft); max-width: 38ch; }
+.hero-grid { grid-template-columns: 1.9fr 1fr; gap: clamp(32px, 5vw, 72px); }
+.hero-media { margin-bottom: clamp(40px, 5vw, 56px); }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
